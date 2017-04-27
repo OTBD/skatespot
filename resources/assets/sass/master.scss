@@ -9,6 +9,78 @@ $grey: #292929;
 
 body{
     font-family: 'Libre Franklin', sans-serif;
+    font-size: 15px;
+}
+
+//buttons
+
+.btn-blue{
+    background-color: $blue;
+    color: $white;
+    &:hover{
+        background-color: darken($blue, 10%);
+        color: $white;
+    }
+}
+
+//navbar
+
+.navbar-transparent{
+    background-color: $white;
+    border: none;
+    margin-bottom: 0;
+}
+.landingnav{
+.navbar-center{
+    padding-left: 200px;
+}
+#login-dp{
+    min-width: 265px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color: $white;
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+.ss-form-control{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px 0px 0px;
+}
+
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+    .navbar-center{
+        padding-left: 0px;
+    }
+}
+@media(max-width: 1200px){
+    .navbar-center{
+        padding-left: 75px;
+    }
+}
+@media(max-width: 400px){
+    .navbar-center{
+        padding-left: 0px;
+    }
+}
 }
 .homepage{
     .sb_left{
@@ -79,5 +151,29 @@ body{
             background-position: center;
             background-size: cover;
         }
+    }
+}
+
+.landingpage{
+    .hero{
+        height: 100vh;
+        width: auto;
+        background: url("/images/landing/bg.jpeg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        h1{
+            text-align: center;
+            margin-top: 25%;
+        }
+        p{
+            text-align: center;
+            margin-top: 25px;
+        }
+    }
+    .community{
+        background-color: $blue;
+        padding:50px;
     }
 }
