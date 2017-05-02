@@ -247,6 +247,207 @@ body{
 
     }
     .home-main{
+        .featured-spot{
+            width: 100%;
+            height: 300px;
+            transition: box-shadow $duration;
+            h2{
+                color: $white;
+                font-weight: 200;
+                position: absolute;
+                padding-left: 15px;
+                animation: 0.5s ease-in 0s 1 fadeInLeft;
+                @keyframes fadeInLeft{
+                    0%{
+
+                        opacity: 0;
+                        transform: translateX(-20%);
+                    }
+                    100%{
+                        opacity: 1;
+                        transform: translateX(0%);
+                    }
+                }
+            }
+            h5{
+                color: $white;
+                font-weight: 600;
+                position: absolute;
+                margin-top: 60px;
+                padding-left: 15px;
+                text-transform: uppercase;
+                animation: 0.5s ease-in 0s 1 fadeInLeft;
+
+            }
+            .spot-type{
+                position: absolute;
+                top: 25px;
+                right: 15px;
+                background-color: $white;
+                height: 30px;
+                width: 130px;
+                border-left: 3px solid $blue;
+                p{
+                    color: $grey;
+                    margin-top: 5px;
+                    text-align: center;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    animation: 0.5s ease-in 0s 1 fadeInLeft;
+                }
+            }
+            .rating-system{
+                position: absolute;
+                bottom: 2px;
+                padding-left: 15px;
+                animation: 0.5s ease-in 0s 1 fadeInLeft;
+                .star-ratings-css {
+                  unicode-bidi: bidi-override;
+                  color: $white;
+                  font-size: 20px;
+                  height: auto;
+                  width: 100px;
+
+                  position: relative;
+                  padding: 0;
+                  margin-left: 3px;
+
+                }
+                .star-ratings-css-top {
+                  color: $blue;
+                  padding: 0;
+                  position: absolute;
+                  z-index: 1;
+                  display: block;
+                  letter-spacing: 5px;
+                  top: 0;
+                  left: 0;
+                  overflow: hidden;
+                }
+                .star-ratings-css-bottom {
+                  padding: 0;
+                  display: block;
+                  letter-spacing: 5px;
+                  z-index: 0;
+                }
+                p{
+                    font-size: 10px;
+                    color: $white;
+                }
+            }
+            .bust-type{
+                position: absolute;
+                margin-left: 200px;
+                width: 150px;
+                bottom: 12px;
+                h5{
+                    display: block;
+                    color: $white;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+
+                }
+                p{
+                    display: block;
+                    color: $blue;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+                    padding-left: 15px;
+                    padding-top: 15px;
+                    animation: 0.5s ease-in 0s 1 fadeInLeft;
+                }
+            }
+            .difficulty{
+                position: absolute;
+                margin-left: 350px;
+                bottom: 12px;
+                width: 150px;
+                h5{
+                    display: block;
+                    color: $white;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+                }
+                p{
+                    color: red;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+                    padding-left: 15px;
+                    padding-top: 15px;
+                    animation: 0.5s ease-in 0s 1 fadeInLeft;
+                }
+            }
+            img{
+                width: 100%;
+                height: 300px;
+            }
+            &:hover{
+                box-shadow: 0 0 50px rgba(black, 0.3);
+            }
+        }
+        .featured-spot-right {
+          position: relative;
+          width: 100%;
+          margin-bottom: 20px;
+          height: 300px;
+          z-index: 1;
+          transition: box-shadow $duration;
+          img{
+              width: 100%;
+              height: 300px;
+          }
+        }
+        .featured-spot-right:hover #f1_card {
+          transform: rotateY(180deg);
+          box-shadow: 0 0 50px rgba(black, 0.1);
+
+        }
+        .featured-spot-right-container {
+          perspective: 1000;
+        }
+        #f1_card {
+          width: 100%;
+          height: 300px;
+          transform-style: preserve-3d;
+          transition: all 0.5s linear;
+        }
+
+        .face {
+          position: absolute;
+          width: 100%;
+          height: 300px;
+          backface-visibility: hidden;
+          h2{
+              color: $white;
+              font-weight: 200;
+              position: absolute;
+              padding-left: 15px;
+              font-size: 1.4em;
+              padding-top: 5px;
+              animation: 0.5s ease-in 0s 1 fadeInLeft;
+          }
+          h5{
+              color: $white;
+              font-weight: 600;
+              position: absolute;
+              margin-top: 60px;
+              padding-left: 15px;
+              text-transform: uppercase;
+              animation: 0.5s ease-in 0s 1 fadeInLeft;
+          }
+        }
+        .face.back {
+          display: block;
+          transform: rotateY(180deg);
+          box-sizing: border-box;
+          padding: 10px;
+          color: black;
+          text-align: center;
+          background-color: $white;
+        }
+
+
         .top-spots{
             background-color: $blue;
             width: 100%;

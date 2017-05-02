@@ -46,13 +46,60 @@
                 <div class="home-main">
 
                     <div class="col-lg-8">
-                        <div class="top-spots">
+                        <div class="featured-spot">
+                            <h2>Sneinton Market</h2>
+                            <h5>Nottingham, UK</h5>
 
+                            <div class="spot-type">
+                                <p>skatepark</p>
+                            </div>
+
+                            <div class="rating-system">
+
+                                <div class="star-ratings-css">
+                                  <div class="star-ratings-css-top" style="width: 85%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                  <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                </div>
+                                <p>Based on 3,012 ratings.</p>
+                            </div>
+
+                            <div class="bust-type">
+                                <h5>Bust Type</h5>
+                                <p>low</p>
+                            </div>
+
+                            <div class="difficulty">
+                                <h5>difficulty</h5>
+                                <p>high</p>
+                            </div>
+
+                            <img src="https://dev.theresortcrowd.com/bundles/app/images/our-properties-bg.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="top-spots">
+                        <!-- <div class="featured-spot-right">
 
+                            <h2>Kirkhallam Skatepark</h2>
+                            <h5>Derbyshire, UK</h5>
+
+                            <img src="https://dev.theresortcrowd.com/bundles/app/images/why-invest-in-holiday-resorts-bg.jpg" alt="">
+
+                            <div class="spot-contents">
+                                yo
+                            </div>
+                        </div> -->
+                        <div class="featured-spot-right">
+                        <div id="f1_card" class="shadow">
+                          <div class="front face">
+                              <h2>Kirkhallam Skatepark</h2>
+                              <h5>Derbyshire, UK</h5>
+                            <img src="https://dev.theresortcrowd.com/bundles/app/images/why-invest-in-holiday-resorts-bg.jpg"/>
+                          </div>
+                          <div class="back face center">
+                            <p>This is nice for exposing more information about an image.</p>
+                            <p>Any content can go here.</p>
+                          </div>
+                        </div>
                         </div>
                     </div>
 
