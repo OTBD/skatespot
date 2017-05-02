@@ -31,4 +31,9 @@ class UserController extends Controller
 
     }
 
+    public function index()
+   {
+       $user = DB::table('user')->get();
+   }
+
 }
