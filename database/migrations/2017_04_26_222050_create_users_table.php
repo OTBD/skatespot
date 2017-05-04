@@ -19,8 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('username')->unique();
             $table->string('password');
+            $table->string('location')->default('N/A');
+            $table->string('skate_type')->default('Street');
             $table->string('type')->default('U');
             $table->string('avatar')->default('default.jpg');
+            $table->string('header')->default('default-header.jpg');
             $table->rememberToken();
             $table->timestamps();
         });

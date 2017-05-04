@@ -52,6 +52,48 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
+                            <label for="location" class="col-md-4 control-label">Location</label>
+
+                            <div class="col-md-6">
+                                <input id="location" type="location" class="form-control" name="location" value="{{ old('location') }}" required>
+
+                                @if ($errors->has('location'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('location') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('skate_type') ? ' has-error' : '' }}">
+                            <label for="skate_type" class="col-md-4 control-label">Skate type</label>
+
+                            <div class="col-md-6">
+                                <input id="skate_type" type="skate_type" class="form-control" name="skate_type" value="{{ old('skate_type') }}" required>
+
+                                @if ($errors->has('skate_type'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('skate_type') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

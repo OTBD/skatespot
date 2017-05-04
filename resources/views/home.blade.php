@@ -47,11 +47,14 @@
 
                     <div class="col-lg-8">
                         <div class="featured-spot">
+                            <div id="fspotmain" class="shadow">
+                                <div class="front face">
+
                             <h2>Sneinton Market</h2>
                             <h5>Nottingham, UK</h5>
 
                             <div class="spot-type">
-                                <p>skatepark</p>
+                                <p>Sponsored</p>
                             </div>
 
                             <div class="rating-system">
@@ -64,7 +67,7 @@
                             </div>
 
                             <div class="bust-type">
-                                <h5>Bust Type</h5>
+                                <h5>Bust</h5>
                                 <p>low</p>
                             </div>
 
@@ -75,47 +78,41 @@
 
                             <img src="https://dev.theresortcrowd.com/bundles/app/images/our-properties-bg.jpg" alt="">
                         </div>
+                        <div class="back face center">
+                            hey
+                        </div>
+                        </div>
+                        </div>
                     </div>
                     <div class="col-lg-4">
-                        <!-- <div class="featured-spot-right">
-
-                            <h2>Kirkhallam Skatepark</h2>
-                            <h5>Derbyshire, UK</h5>
-
-                            <img src="https://dev.theresortcrowd.com/bundles/app/images/why-invest-in-holiday-resorts-bg.jpg" alt="">
-
-                            <div class="spot-contents">
-                                yo
-                            </div>
-                        </div> -->
                         <div class="featured-spot-right">
-                        <div id="f1_card" class="shadow">
+                        <div id="fspotright" class="shadow">
                           <div class="front face">
                               <h2>Kirkhallam Skatepark</h2>
                               <h5>Derbyshire, UK</h5>
-                            <img src="https://dev.theresortcrowd.com/bundles/app/images/why-invest-in-holiday-resorts-bg.jpg"/>
+                              <div class="rating">
+                                  <p>4</p>
+                                  <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                              </div>
+                              <div class="bust-type">
+                                  <h5>bust</h5>
+                                  <p>LOW</p>
+                              </div>
+                              <div class="difficulty">
+                                  <h5>difficulty</h5>
+                                  <p>high</p>
+                              </div>
+                            <img src="http://www.fleetmonitoring.co.uk/wp-content/uploads/2015/12/Motrak-blue-blurry-bg.jpg"/>
                           </div>
                           <div class="back face center">
-                            <p>This is nice for exposing more information about an image.</p>
-                            <p>Any content can go here.</p>
+                            <div class="desc">
+                                Description of the spot will go here and will be limited by 'x' amount of characters or given two descriptions, one being short the other a paragraph.
+                            </div>
+                            <div class="full-spot">
+                                <a href="#">View Full Spot</a>
+                            </div>
                           </div>
                         </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="top-spots">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="top-spots">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="top-spots">
-
                         </div>
                     </div>
                 </div>
