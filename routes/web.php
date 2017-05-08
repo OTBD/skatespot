@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
-Route::post('profile', 'UserController@update_header');
+
 
 Auth::routes();
 
@@ -32,12 +32,14 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 {
     Route::get('/admin', function()
     {
-        $users = DB::table('users')->count();
+        $usercount = DB::table('users')->count();
         $spots = DB::table('spots')->count();
+
+        $userlist = DB::table('users')->get();
 
         // return $users;
 
-        return view('admin/home', compact('users','spots'));
+        return view('admin/home', compact('usercount','spots','userlist'));
     });
 
 });

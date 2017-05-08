@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use Image;
+use Storage;
 
 class UserController extends Controller
 {
@@ -17,10 +18,20 @@ class UserController extends Controller
 
     public function update_avatar(Request $request) {
         //handle uploads
+        $user   = Auth::user();
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/profile_pictures/' . $filename ) );
+            $path   = public_path('uploads/profile_pictures/'. $filename );
+
+            //this is the path your file goes to, dont fuckin delete
+
+            // $path   = public_path('uploads/profile_pictures/'. $user->username .'/'. $filename );
+
+            // i need to create this directory and then save the image to it
+            // Storage::MakeDirectory(public_path('uploads/profile_pictures/'.$path));
+
+            Image::make($avatar->getRealPath())->resize(300, 300)->save($path);
 
             $user = Auth::user();
             $user->avatar = $filename;

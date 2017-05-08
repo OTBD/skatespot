@@ -4,80 +4,6 @@
 <div class="container">
     <div class="row">
         <div class="adminpage">
-            <!-- <div class="col-lg-3">
-                <div class="quick-links">
-                    <ul role="tablist">
-                        <li role="dashboard" class="active"><i class="fa fa-globe" aria-hidden="true"></i><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab">Dashboard</a></li>
-                        <li role="users"><i class="fa fa-globe" aria-hidden="true"></i><a href="#users" aria-controls="users" role="tab" data-toggle="tab">Users</a></li>
-                        <li><i class="fa fa-beer" aria-hidden="true"></i><a href="#" id="users">Users</a></li>
-                        <li><i class="fa fa-map" aria-hidden="true"></i><a href="#" id="spots">Spots</a></li>
-                        <li><i class="fa fa-camera" aria-hidden="true"></i><a href="#" id="crews">Crews</a></li>
-                        <li><i class="fa fa-calendar" aria-hidden="true"></i><a href="#" id="media"> Media</a></li>
-                        <li><i class="fa fa-calendar" aria-hidden="true"></i><a href="#" id="events"> Events</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9 ">
-                <div class="tab-content">
-                <div class="dashboard" role="tabpanel" id="dashboard">
-                    <div class="col-lg-4">
-                        <div class="dashboard-sq orange">
-                            <h5>Total Users Registered</h5>
-
-                            <h3>{{ $users }}</h3>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="dashboard-sq blue">
-                            <h5>Total Spots Added</h5>
-                            <h3>{{ $spots }}</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="dashboard-sq green">
-                            <h5>Total Users Registered</h5>
-                            <h3>10,321</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="user-list" role="tabpanel" id="users">
-                    <div class="panel panel-default">
-
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                     <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="col-lg-3">
             <!-- Nav tabs -->
@@ -101,7 +27,7 @@
                           <div class="dashboard-sq orange">
                               <h5>Total Users Registered</h5>
 
-                              <h3>{{ $users }}</h3>
+                              <h3>{{ $usercount }}</h3>
 
                           </div>
                       </div>
@@ -122,36 +48,36 @@
               </div>
               <div role="tabpanel" class="tab-pane" id="users">
                   <div class="user-list" role="tabpanel" id="users">
+                      <p>Here lists all the users registered to skatespot.</p>
                       <div class="panel panel-default">
 
                           <table class="table">
                               <thead>
                                   <tr>
                                       <th>#</th>
-                                      <th>First Name</th>
-                                      <th>Last Name</th>
+                                      <th>Name</th>
                                       <th>Username</th>
+                                      <th>Email</th>
+                                      <th>Location</th>
+                                      <th>Date Joined</th>
                                   </tr>
                               </thead>
                               <tbody>
+
+
+                                  <p></p>
+
+ @foreach ($userlist as $user)
                                   <tr>
-                                      <th scope="row">1</th>
-                                      <td>Mark</td>
-                                      <td>Otto</td>
-                                      <td>@mdo</td>
+                                      <th scope="row">{{$user->id}}</th>
+                                      <td>{{$user->name}}</td>
+                                      <td>{{$user->username}}</td>
+                                      <td>{{$user->email}}</td>
+                                      <td>{{$user->location}}</td>
+                                      <td>{{$user->created_at}}</td>
                                   </tr>
-                                  <tr>
-                                      <th scope="row">2</th>
-                                      <td>Jacob</td>
-                                      <td>Thornton</td>
-                                      <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row">3</th>
-                                      <td>Larry</td>
-                                      <td>the Bird</td>
-                                       <td>@twitter</td>
-                                  </tr>
+                                  @endforeach
+
                               </tbody>
                           </table>
                       </div>

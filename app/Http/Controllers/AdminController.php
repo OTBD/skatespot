@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //
-    public function displayUsers()
+    public function index()
     {
-        $displayUsers = DB::table('users')
-            ->orderBy('id', 'asc')
-            ->lists('name', 'id'); // checked some of my code I have these swapped value first then id
+        $users = DB::table('users')->get();
+
+        return view('admin.home', ['users' => $users]);
     }
 }
