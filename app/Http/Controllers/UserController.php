@@ -31,6 +31,22 @@ class UserController extends Controller
 
     }
 
+    public function update_header(Request $request) {
+        //handle uploads
+        if($request->hasFile('header')){
+            $header = $request->file('header');
+            $filename = time() . '.' . $header->getClientOriginalExtension();
+            Image::make($header)->resize(825, 300)->save( public_path('/uploads/profile_headers/' . $filename ) );
+
+            $user = Auth::user();
+            $user->header = $filename;
+            $user->save();
+        }
+
+        return view('profile', array('user' => Auth::user()) );
+
+    }
+
     public function index()
    {
        $user = DB::table('user')->get();

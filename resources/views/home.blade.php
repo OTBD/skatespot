@@ -79,7 +79,8 @@
                             <img src="https://dev.theresortcrowd.com/bundles/app/images/our-properties-bg.jpg" alt="">
                         </div>
                         <div class="back face center">
-                            hey
+                            Description of the spot will go here and will be limited by 'x' amount of characters or given two descriptions, one being short the other a paragraph.
+
                         </div>
                         </div>
                         </div>
