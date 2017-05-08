@@ -685,6 +685,15 @@ body{
             }
         }
     }
+    .tab-pane{
+        -webkit-box-shadow: -1px 4px 10px -2px rgba(0,0,0,0.1);
+        -moz-box-shadow: -1px 4px 10px -2px rgba(0,0,0,0.1);
+        box-shadow: -1px 4px 10px -2px rgba(0,0,0,0.1);
+        background-color: $white;
+        padding: 10px 20px 0px 20px;
+        width: 100%;
+        height: 300px;
+    }
     .dashboard{
         .orange{
             background-color: orange;
