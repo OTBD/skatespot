@@ -26,6 +26,8 @@ Route::post('profile', 'UserController@update_avatar');
 
 Auth::routes();
 
+
+
 Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()

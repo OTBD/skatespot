@@ -59,7 +59,7 @@
                                       <th>Username</th>
                                       <th>Email</th>
                                       <th>Location</th>
-                                      <th>Date Joined</th>
+                                      <th>Last Active</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -74,7 +74,7 @@
                                       <td>{{$user->username}}</td>
                                       <td>{{$user->email}}</td>
                                       <td>{{$user->location}}</td>
-                                      <td>{{$user->created_at}}</td>
+                                      <td>{{$user->updated_at}}</td>
                                   </tr>
                                   @endforeach
 
